@@ -58,7 +58,7 @@ Clutter means extra words that add no meaning. Strip every sentence to its clean
   - *"Retrying here would exacerbate the contention"* is sharper than *"would make the contention worse."*
   - *"The null check is superfluous: the caller already validated the input."*
   - *"The design is still inchoate"* says more than *"The design isn't finished."* It's begun but has no shape yet.
-- **Set rich words in plain surroundings.** One per sentence, a few per paragraph. Against plain words, the rich word stands out and does its job. Pile three into one sentence and it reads like a vocabulary quiz.
+- **Let fit decide, not frequency.** Use a rich word wherever it fits naturally and makes the sentence more exact or more elegant, as often as that happens. There's no quota and no ceiling. The only test is whether it belongs: if you reached for it to sound learned, or the sentence bends around it, cut it. If it's the word the thought wanted, use it without restraint.
 - **Rich is not inflated.** *Leverage, facilitate, utilize,* and *robust* aren't rich words. They're corporate filler that says less than the plain word. The test is precision: the rich word says something the plain word can't, and the inflated word says nothing extra at all.
 - **Avoid clichés and buzzwords.** *At the end of the day, low-hanging fruit, robust, seamless, cutting-edge, best-in-class, holistic, synergy, delve, unlock, empower, game-changer.*
 - **Listen to the sound.** Read sentences aloud in your head. Rhythm matters: vary sentence length, and avoid strings of sentences that all have the same shape.
