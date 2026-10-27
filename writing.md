@@ -51,8 +51,15 @@ Clutter means extra words that add no meaning. Strip every sentence to its clean
 
 ## 4. Words
 
-- **Prefer short, concrete, everyday words.** *Use* beats *utilize*. *Start* beats *commence*. *Show* beats *demonstrate*.
+- **Never swap a short word for a longer synonym.** *Use* beats *utilize*. *Start* beats *commence*. *Show* beats *demonstrate*. When two words mean the same thing, the short one wins.
 - **Choose the precise word.** Look for the word that means exactly what you mean, not one that's roughly near it.
+- **Reach for the rich word when it's the exact one.** Draw on the GRE high-frequency list: *obviate, exacerbate, spurious, latent, quiescent, superfluous, inchoate, tenuous, salient, disparate, ephemeral, equivocal, intransigent, laconic*. These words earn their place because they say in one word what plain English needs a phrase for, or because they carry a shade the everyday word lacks. Use them in documents and in code comments alike.
+  - *"The cache obviates the second lookup"* beats *"The cache removes the need for the second lookup."*
+  - *"Retrying here would exacerbate the contention"* is sharper than *"would make the contention worse."*
+  - *"The null check is superfluous: the caller already validated the input."*
+  - *"The design is still inchoate"* says more than *"The design isn't finished."* It's begun but has no shape yet.
+- **Set rich words in plain surroundings.** One per sentence, a few per paragraph. Against plain words, the rich word stands out and does its job. Pile three into one sentence and it reads like a vocabulary quiz.
+- **Rich is not inflated.** *Leverage, facilitate, utilize,* and *robust* aren't rich words. They're corporate filler that says less than the plain word. The test is precision: the rich word says something the plain word can't, and the inflated word says nothing extra at all.
 - **Avoid clichés and buzzwords.** *At the end of the day, low-hanging fruit, robust, seamless, cutting-edge, best-in-class, holistic, synergy, delve, unlock, empower, game-changer.*
 - **Listen to the sound.** Read sentences aloud in your head. Rhythm matters: vary sentence length, and avoid strings of sentences that all have the same shape.
 - **Treat new usage carefully.** Adopt a new word when it fills a real need. Don't adopt it because it's fashionable.
@@ -71,7 +78,7 @@ Make these choices before writing and hold them throughout:
 
 **The lead.** The first sentence matters most. If it doesn't pull the reader into the second, the piece has failed. Lead with substance: what this is, why it matters, or the answer itself. No throat-clearing, no restating the question, no "In this document we will..."
 
-**The ending.** Stop when you're done. The perfect ending is usually earlier than you think. Don't summarize what the reader just read. Don't add a moral. End on a sentence that finishes the thought (a final fact, a next step, an implication) and then stop.
+**The ending.** Stop when you're done. The perfect ending is usually earlier than you think. Don't summarize what the reader just read. Don't add a moral. End on a sentence that finishes the thought (a final fact, a next step, an implication, or a callback to the opening) and then stop.
 
 ## 7. Sentences: the bits and pieces
 
@@ -83,8 +90,9 @@ Make these choices before writing and hold them throughout:
 - **Signal turns early.** Put *but, yet, however, still, instead, meanwhile* near the start of a sentence so the reader knows the direction changed. *But* is a fine way to open a sentence.
 - **That vs. which.** Use *that* for clauses that define (no comma). Use *which* for clauses that add (with a comma).
 - **Punctuation.** Avoid exclamation points; let the content carry the emphasis. Use semicolons sparingly. Dashes work for an aside or an amplification. Don't use them to stitch together sentences that should be separate.
+- **No colon followed by a run of short phrases.** In prose, don't write *"forty sources: the ERP, three CRMs, and a legacy warehouse."* Pick the item that matters and work it into the sentence, or give the items a sentence of their own. If they're truly parallel and there are several, use a real list.
 - **Keep paragraphs short.** Long blocks intimidate the reader. Each paragraph should do one job. Don't swing to the other extreme of all one-line paragraphs, though.
-- **Don't be cute.** Wordplay and clever asides that don't serve the reader are self-indulgence.
+- **Don't be cute.** Wordplay and clever asides that don't serve the reader are self-indulgence. Wit that sharpens the point is another matter; see section 11.
 
 ## 8. Rewriting is the essence of writing
 
@@ -109,6 +117,42 @@ Zinsser's advice for science, technology, and business writing applies directly 
 - **Confidence.** Write with authority about what you know. Don't apologize or pre-qualify.
 - **Trust your material.** If the content is interesting, plain presentation is enough. Don't hype it.
 - **Care about the craft.** Write as well as you can, even for a short note. Quality is a habit.
+
+## 11. Wit and edge
+
+Plain doesn't have to mean flat. The rules above make writing clear; this section gives it a voice: amused, sure of itself, a half-step ahead of the reader. Wit here is a tool for making the point land, not a break from making it. A joke that blurs the point is clutter with a punchline.
+
+### Documents only
+
+This section applies to documents: prose a person sits down to read. It never applies to text that lives in or beside code: code comments, docstrings, commit messages, log lines, error messages, CLI help text, identifiers, or config. That text stays literal and direct. Sections 1–10 still govern it, so cut the clutter there too and use the rich vocabulary from section 4, but leave the wit out.
+
+### Set the dial for the document
+
+- **Essays, opinion pieces, blog posts, long explanations:** full voice.
+- **Design notes, READMEs, PR descriptions, chat answers:** light touch. One sharp line, a deadpan aside, or a kicker. The answer still leads.
+- **Reference docs, runbooks, numbered steps, anything read under pressure:** none. Nobody fixing an outage at 3 a.m. wants your callback.
+
+### The moves
+
+- **Open on a particular, not a principle.** Start with a scene, a quote, a number, or a small absurd fact, then widen to the argument. *"The outage began when a config file said the timeout was 30 and nobody had written down 30 of what"* beats *"Unit ambiguity is a common source of errors."* The point still arrives by the end of the first paragraph.
+- **Let the joke carry the argument.** The right twist says in ten words what a paragraph of reasoning says in a hundred. Test it: delete the joke. If the point survives intact, the joke was decoration; cut it.
+- **Quote the jargon, then translate it.** Let inflated language hang itself. *The vendor calls it "an opportunity to realign expectations." Translation: it's late.*
+- **Bend the familiar phrase.** A cliché used straight is filler. A cliché bent out of shape wakes the reader up. *We didn't pay down the tech debt so much as refinance it.*
+- **Set up long, pay off short.** Let one sentence gather detail, then land the point in a short one. Sometimes a fragment. *The team spent three sprints on a caching layer, added two services, wrote a migration plan, and held a design review with eleven people. Latency went up.*
+- **Understate.** Deadpan beats outrage. Report the absurd in a flat voice and let the reader supply the reaction. *The migration was scheduled for a weekend. It's now in its fourth quarter.*
+- **Ask the naive question.** Ask the obvious thing everyone in the meeting stepped around, in the plainest words available. *If the new system is simpler, why does it need a 40-page runbook?*
+- **Mix high and low.** Put a grand reference next to a mundane one, or describe the mundane in grand terms. *The upgrade had everything a Greek tragedy needs: pride, an ignored warning, and a lockfile.*
+- **Plant early, pay off late.** Introduce an image or phrase in the opening and bring it back at the end with a turn. The callback gives the piece a shape and makes the best kicker there is.
+- **Coin a name and keep it.** A wry label for a recurring thing (*the eleven-person design review*) becomes a running reference the reader enjoys recognizing. Once coined, it obeys section 5: use the same name every time.
+- **Write it to be said.** Contractions, an occasional *Well,* or *Oh, and,* a parenthetical aside, italics where your voice would lean on a word. Ration the asides to one every few paragraphs.
+- **Leave one line worth repeating.** Every longer piece should hold a sentence the reader could quote to a colleague. Balance and reversal help: *We don't have a tooling problem. We have a problem we keep solving with tooling.*
+
+### Limits
+
+- **Aim at ideas, jargon, and bad decisions,** not at the reader or at a colleague by name.
+- **One joke per point.** Stacked jokes read as nerves, the same way stacked hedges do.
+- **Never trade accuracy for a laugh.** If the line is funny and wrong, it goes.
+- **Swagger in the voice, care in the facts.** Confidence isn't contempt, and a sneer is not an argument.
 
 ---
 
@@ -152,7 +196,8 @@ Run these passes on every draft before delivering it.
 4. **Clutter.** Bracket every word that does no work, then delete it. Check against the clutter table.
 5. **Verbs.** Are they active and specific? Have concept nouns become verbs?
 6. **Qualifiers and hype.** Remove reflexive hedges and inflated claims.
-7. **Words.** Replace jargon, buzzwords, and clichés with plain words.
-8. **Sentences and paragraphs.** Break long sentences. Keep paragraphs short and single-purpose.
+7. **Words.** Replace jargon, buzzwords, and clichés with plain words. Then look for spots where a phrase is doing a single word's job, and use the precise rich word there.
+8. **Sentences and paragraphs.** Break long sentences. Rewrite any colon that introduces a run of short phrases. Keep paragraphs short and single-purpose.
 9. **Ending.** Does it stop when it's done, without a recap?
 10. **Sound.** Read it aloud. Does it sound like a clear-headed person talking to a friend?
+11. **Wit.** Is this a document at all, or text that belongs with code? If it's a document, is the dial set right? Does every joke carry a point? In longer pieces, is there one line worth repeating, and does the ending land?
